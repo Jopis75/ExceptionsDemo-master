@@ -78,6 +78,15 @@
                            // men låta anroparen (t.ex. en högre nivå i applikationen)
                            // bestämma hur man ska återhämta sig. 
                 }
+                catch (DivideByZeroException ex)
+                {
+                    // Vi kan logga eller omformulera felet
+                    Console.WriteLine($"Nolldivision i ProcessFile: {ex.Message}");
+                    // Vi kan välja att låta metoden "kasta upp" felet
+                    throw; // När du i `catch` bara vill logga/analysera,
+                           // men låta anroparen (t.ex. en högre nivå i applikationen)
+                           // bestämma hur man ska återhämta sig. 
+                }
                 catch (Exception ex)
                 {
                     // Om vi vill ge en mer meningsfull feltyp till anroparen
