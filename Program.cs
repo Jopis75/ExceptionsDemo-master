@@ -72,7 +72,7 @@
 
                     string? line = reader.ReadLine();
 
-                    if (line == null)
+                    if (string.IsNullOrEmpty(line))
                     {
                         throw new InvalidOperationException("Filen är tom.");
                     }
