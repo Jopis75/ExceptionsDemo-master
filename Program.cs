@@ -19,27 +19,27 @@
                 catch (ArgumentNullException ex)
                 {
                     // Specifikt fel om filnamnet är tomt eller null.
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine($"Filnamnet är tomt eller null: {ex.Message}");
                 }
                 catch (FileNotFoundException ex)
                 {
                     // Specifikt fel om filen inte kunde hittas.
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine($"Filen hittades inte: {ex.Message}");
                 }
                 catch (InvalidOperationException ex)
                 {
                     // Specifikt fel om det inte gick att processa filen.
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine($"Fel vid filprocessning: {ex.Message}");
                 }
                 catch (FormatException ex)
                 {
                     // Specifikt fel om innehållet i filen inte är i rätt format.
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine($"Formatfel: {ex.Message}");
                 }
                 catch (DivideByZeroException ex)
                 {
                     // Specifikt fel om nolldivision.
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine($"Nolldivisionfel: {ex.Message}");
                 }
                 catch (Exception ex)
                 {
