@@ -81,7 +81,7 @@
                     int number = int.Parse(line); // Kan ge FormatException
 
                     // Division: kan ge DivideByZeroException
-                    return 100.0 / number;
+                    return 100 / number;
                 }
                 catch (ArgumentNullException ex)
                 {
